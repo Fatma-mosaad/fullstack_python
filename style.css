@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Anton", sans-serif;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-style: normal;
+  color: #D8C4B6;
+}
+html{
+  --min-height: 100vh; 
+  --card-size: 100px;  
+}
+
+body {
+  background-color: #213555;
+  width: 100%;
+  height: 100%;
+  min-height: var(--min-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  overflow: auto;
+
+}
+
+.container {
+  width: 50%;
+  min-height: 300px;
+  height: auto;
+  background-color: #3E5879;
+  border: 1px solid #213555;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 20px ;
+  padding: 20px;
+}
+
+.start {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(1, 100px);
+}
+
+.start .card {
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+.card {
+  text-align: center;
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+
+.card div {
+  width: var(--card-size);
+  height: var(--card-size);
+  line-height: var(--card-size);
+  color: #213555;
+  background: #D8C4B6;
+  border-radius: 10px;
+  transition: all 500ms ease-out;
+  backface-visibility: hidden;
+  box-shadow: 0 3px 10px black;
+  position: absolute;
+}
+
+
+.start button {
+  cursor: pointer;
+  height: 50px;
+  width: 100px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px black;
+  color: #D8C4B6;
+  background-color: #213555;
+}
+
+.start .card.active div {
+  border: 5px solid #213555;
+}
+
+.card .back {
+  transform: rotateY(-180deg);
+}
+
+.start .card:hover .front,
+.card.flip .front {
+  transform: rotateY(180deg);
+}
+
+.start .card:hover .back,
+.card.flip .back {
+  transform: rotateY(0deg);
+}
+
+.fa-repeat {
+  font-size: 20px;
+  margin-top: 1.2rem;
+  cursor: pointer;
+}
+
+.playground {
+  gap: 10px; 
+}
+
+i{
+  color:  #213555;
+}
+
+.face{
+  color:#D8C4B6 ;
+  font-size: rem;
+}
