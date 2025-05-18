@@ -1,0 +1,40 @@
+.user-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .user-card {
+    flex: 0 0 45%; 
+    border: 1px solid #c2c2c2;
+    padding: 15px;
+    background-color: #b4adad;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  
+  .user-avatar {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .user-role {
+    color: white;
+    border-radius: 20px;
+    padding: 5px 12px;
+    margin: 10px auto;
+    width: fit-content;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  
+  .username {
+    margin: 10px 0 5px;
+  }
+  
